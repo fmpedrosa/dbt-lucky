@@ -1,0 +1,37 @@
+
+version: 2
+
+models:
+    - name: match-results_raw
+      description: "A starter dbt model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            #tests:
+            #    - unique
+            #    - not_null
+
+    - name: album-releases_raw
+      description: "A starter dbt model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            #tests:
+            #    - unique
+            #    - not_null
+    - name: match-results
+      description: "A starter dbt model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            #tests:
+            #    - unique
+            #    - not_null
+    - name: master_table
+      description: "A starter dbt model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            #tests:
+            #    - unique
+            #    - not_null
