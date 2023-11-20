@@ -10,8 +10,8 @@ models:
             #tests:
             #    - unique
             #    - not_null
-
-    - name: album-releases_raw
+            
+    - name: album-releases
       description: "A starter dbt model"
       columns:
           - name: id
@@ -27,7 +27,24 @@ models:
             #tests:
             #    - unique
             #    - not_null
-    - name: master_table
+    - name: master-table-raw
+      description: "A starter dbt model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            #tests:
+            #    - unique
+            #    - not_null
+    - name: master-table
+      description: "A starter dbt model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            #tests:
+            #    - unique
+            #    - not_null
+
+    - name: pivot-table
       description: "A starter dbt model"
       columns:
           - name: id

@@ -9,10 +9,5 @@
 
 {{ config(materialized='table') }}
 
-SELECT artist,album,notes,link,PARSE_DATE('%m/%d/%Y', date) as release_date   FROM `luckycharm23.schemas.album-releases` r where date != 'nan'
+SELECT artist,album,notes,link,PARSE_DATE('%m/%d/%Y', date) as release_date FROM `luckycharm23.schemas.album-releases` r where date != 'nan' AND lower(artist) NOT LIKE 'various artists' 
 
-/*
-    Uncomment the line below to remove records with null `id` values
-*/
-
--- where id is not null
